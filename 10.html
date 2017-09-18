@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vuejs demo10</title>
+	<script src="https://unpkg.com/vue"></script>
+	<style>
+	.red {
+  		color: red;
+	}
+	.blue{
+  		color: blue;
+	}
+	</style>
+</head>
+<body>
+<div id="app">
+	<input v-model="content" class="red">
+	<p v-bind:class="content" class="blue">
+		content: {{ content }}
+	</p>
+</div>
+<script>
+	new Vue({
+		el: '#app',
+		data: {
+			content: ""
+		}
+	})
+</script>
+	
+</body>
+</html>

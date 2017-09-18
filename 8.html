@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vuejs demo8</title>
+</head>
+<script src="https://unpkg.com/vue"></script>
+<body>
+	<div id="example">
+		<p>Original message: "{{ message }}"</p>
+		<p>Computed reversed message: "{{ reversedMessage }}"</p>
+	</div>
+
+	<script>
+		var vm = new Vue({
+			el: '#example',
+			data: {
+				message: 'Hello'
+			},
+			computed: {
+				reversedMessage: function(){
+					return this.message.split('').reverse('').join('' 从，)
+				}
+			}
+		})
+	</script>
+</body>

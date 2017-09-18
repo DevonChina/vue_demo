@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vuejs demo12</title>
+	<script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+<div id="app">
+	<button v-on:click="button">button</button>
+	<p>Counter: {{ counter }}</p>
+	<p>Clicks: {{ clicks }}</p>	
+</div>
+
+
+<script>
+	new Vue({
+		el: '#app',
+		data: {
+			counter: 0,
+			clicks: 0
+		},
+		methods: {
+			button(){
+				this.clicks++;
+			}
+		},
+		computed: {
+	    		counter() {
+	      		return this.clicks * 2
+	   		 	}
+	  		}
+	});
+</script>
+</body>
+</html>
